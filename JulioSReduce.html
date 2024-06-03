@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de reduce()</title>
+</head>
+<body>
+  <h1>Suma de números con reduce()</h1>
+  <p>Ingrese una lista de números separados por comas:</p>
+  <input type="text" id="listaNumeros">
+  <button onclick="sumarNumeros()">Sumar</button>
+  <p id="resultadoSuma"></p>
+
+  <script>
+    function sumarNumeros() {
+      const lista = document.getElementById('listaNumeros').value.split(',').map(Number);
+      const suma = lista.reduce((a, b) => a + b);
+
+      document.getElementById('resultadoSuma').innerHTML = `La suma es: ${suma}`;
+    }
+  </script>
+</body>
+</html>
+
