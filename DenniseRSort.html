@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de sort()</title>
+</head>
+<body>
+  <h1>Ordenando números con sort()</h1>
+  <p>Ingrese una lista de números separados por comas:</p>
+  <input type="text" id="listaNumeros">
+  <button onclick="ordenarNumeros()">Ordenar</button>
+  <p id="resultadoLista"></p>
+
+  <script>
+    function ordenarNumeros() {
+      const numeros = document.getElementById('listaNumeros').value.split(',').map(Number);
+      const numerosOrdenados = numeros.sort();
+
+      document.getElementById('resultadoLista').innerHTML = `Lista ordenada: ${numerosOrdenados.join(', ')}`;
+    }
+  </script>
+</body>
+</html>
