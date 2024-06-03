@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de filtrer()</title>
+</head>
+<body>
+  <h1>Números pares filtrer()</h1>
+  <p>Ingrese una lista de números separados por comas:</p>
+  <input type="text" id="listaNumeros">
+  <button onclick="filtrarNumeros()">Filtrar</button>
+  <div id="resultadoPares"></div>
+
+  <script>
+    function filtrarNumeros() {
+      const lista = document.getElementById('listaNumeros').value.split(',').map(Number);
+      const pares = lista.filter(num => num % 2 === 0);
+
+      document.getElementById('resultadoPares').innerHTML = `Números pares: ${pares.join(', ')}`;
+    }
+  </script>
+</body>
+</html>
